@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한자 목록</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/grade.css">
+  <link rel="icon" href="images/favicon.png">
+  <script src="js/hanjalist.js"></script>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div class="headwrap">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" alt="로고"></a></div>
+      </div>
+    </header>
+
+    <article class="content">
+      <section>
+        <div class="tab_header">
+          <div class="page_limit">
+            <select id="table_size">
+              <option value="10">10개씩 보기</option>
+              <option value="25">25개씩 보기</option>
+              <option value="50">50개씩 보기</option>
+              <option value="100">100개씩 보기</option>
+            </select>
+          </div>
+          <div class="tab_filter">
+            <input type="text" id="search_text">
+            <button id="search_btn" class="active">Filter</button> <!--검색기능-->
+          </div>
+        </div>
+      </section>
+      <section class="table">
+        <div class="sorter">
+          <ul>
+            <li id="id"><div><span>기본</span></div></li>
+            <li id="grade"><div><span>급수</span></div></li>
+            <li id="reading"><div><span>대표음</span></div></li>
+            <li id="writing"><div><span>한자</span></div></li>
+            <li id="name"><div><span>대표훈음</span></div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul>
+            <li>
+              <div class="card_grade"><span>급수</span></div>
+              <div class="card_reading"><span>대표음</span></div>
+              <div class="card_writing"><span>한자</span></div>
+              <div class="card_name"><span>대표훈음</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <div class="page_footer">
+          <span></span>
+          <div class="index_buttons">
+            <div id="prev_pageGroup"></div>
+            <div id="index_prev_pageGroup"></div>
+            <ol id="numbers"></ol>
+            <div id="index_next_pageGroup"></div>
+            <div id="next_pageGroup"></div>
+          </div>
+        </div>
+      </section>
+    </article>
+    
+    <footer>
+      <p>한자의 분류는 <span class="weblink"><a href="https://www.hanja.re.kr/" target="_blank">한국어문회</a>의 &#91;한자능력급수&#93;-&#91;학습자료&#93;-&#91;기타자료&#93;</span>의 파일을 기준으로 하였습니다.</p>
+    </footer>
+  </div>
+
+  <!--데이터 출력 js-->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/pagination.js" defer></script>
+</body>
+</html>
