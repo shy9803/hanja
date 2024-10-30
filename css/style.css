@@ -51,6 +51,3 @@ footer p {
 .weblink::before, .weblink::after {
   content: "'";
 }
-
-/* 미디어 최소너비 사이즈 임의 지정*/
-@media screen and (min-width: 788px) {} 
