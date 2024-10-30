@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+
+:root {
+  --up_arrow_color: #ffffff;
+  --up_arrow_shadow: 0px 0px 10px white;
+
+  --down_arrow_color: #ffffff49;
+  --down_arrow_shadow: 0px 0px 0px rgba(255, 255, 255, 0);
+} /*sort 기능에 사용*/
+
+/* 기본 */
+.content {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+button {
+  padding: 7px 15px;
+  color: #9c9c9c;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button.active, button:hover {
+  background: linear-gradient(to bottom, #9c9c9c 0%, #111 100%);
+  color: rgb(250, 236, 177);
+}
+
+/* 상단_개수조정 드롭다운&검색필터 */
+.tab_header {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.page_limit {
+  font-size: 20px;
+}
+
+.page_limit select {
+  font-size: 16px;
+  color: #ffffff;
+  padding: 5px;
+  background: linear-gradient(to bottom, #9c9c9c 0%, #111 100%);
+}
+
+.page_limit option {
+  background: rgb(58, 58, 58);
+}
+
+#search_text {
+  height: 25px;
+  width: 200px;
+  background: transparent;
+  color: #333;
+  border: 1px solid rgb(58, 58, 58);
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+#search_btn {
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* 중간_배열 및 데이터 나열 */
+.table {
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+}
+
+.sorter {
+  width: 100%;
+}
+.sorter > ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sorter > ul > li {
+  width: 20%;
+  height: 40px;
+  margin: 1% 0.5%;
+  background: linear-gradient(to bottom, #9c9c9c 0%, #111 100%);
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.sorter > ul > li > div {
+  padding: 10px;
+  letter-spacing: 2px;
+  width: 80%;
+  height: inherit;
+}
+.sorter > ul > li > div > span {
+  color: rgb(250, 236, 177);
+}
+.sorter > ul > li.sort_indication::before {
+  position: absolute;
+  content: '\25b2';
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--up_arrow_color);
+  text-shadow: var(--up_arrow_shadow);
+  right: 5px;
+  margin-top: 2px;
+}
+
+.sorter > ul > li.sort_indication::after {
+  position: absolute;
+  content: '\25bc';
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--down_arrow_color);
+  text-shadow: var(--down_arrow_shadow);
+  right: 5px;
+  margin-top: -23px;
+}
+/* 중간_카드, 그리고 각 내부 스타일 */
+.card > ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;  /*기본값이므로 없어도 무방*/
+  margin-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.card > ul > li {
+  width: 160px;
+  height: 220px;
+  background-color: #eee;
+  margin: 3px;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 5px;
+}
+
+.card_writing {
+  width: 100%;
+  height: 120px;
+  font-size: 75px;
+  line-height: 120px;
+  font-family: 'Noto Sans Traditional Chinese', sans-serif;
+}
+.card_name {
+  width: 96%;
+  height: auto;
+  font-size: 16px;
+  margin: 5px auto;
+  color: #666;
+  background-color: #fdfdd9;
+  border-radius: 5px;
+}
+.card_grade {
+  width: 96%;
+  height: 20px;
+  font-size: 12px;
+  margin: 2px auto;
+  text-align: left;
+}
+.card_grade span {
+  color: rgb(5, 5, 84);
+}
+.card_grade span::after {
+  content: " 신습한자";
+}
+.card_reading {
+  width: 96%;
+  height: auto;
+  font-size: 10px;
+  text-align: left;
+  border-bottom: 1px solid rgb(5, 5, 84);
+  margin-bottom: 2px;
+  margin-top: -6px;
+}
+.card_reading span {
+  color: rgb(9, 9, 125);
+}
+.card_reading span::before {
+  content: "··· 대표 음: ";
+}
+
+/* 하단_페이지 구분&페이지네이션 포함 */
+.page_footer {
+  margin-top: 25px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.index_buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.index_buttons button {
+  border: none;
+}
+.index_buttons button.active, .index_buttons button:hover {
+  border-radius: 15px;
+}

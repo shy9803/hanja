@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 공통인 Header & Footer CSS만 기입 */
+/* 공통 적용 CSS */
+* {
+  color: #222;
+  font-family: 'Noto Sans Korean', sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* 헤더 CSS */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #ddd;
+}
+.logo {
+  width: 50%;
+  height: 70px;
+  text-align: center;
+
+}
+.logo img {
+  height: 70px;
+}
+
+/* 푸터 CSS */
+footer {
+  width: 100%;
+  height: 100px;
+  background-color: #ddd;
+}
+footer p {
+  text-align: center;
+  padding-top: 20px;
+}
+.weblink > a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.weblink::before, .weblink::after {
+  content: "'";
+}
+
+/* 미디어 최소너비 사이즈 임의 지정*/
+@media screen and (min-width: 788px) {} 
