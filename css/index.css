@@ -17,6 +17,9 @@
   color: #aaa;
   margin: 8px 0;
 }
+#content_title > p > span {
+  font-size: 12px;
+}
 
 table {
   margin: 15px auto;
